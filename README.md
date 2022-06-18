@@ -16,4 +16,4 @@
 - Convert to React single page app?
 - Alternatively, create back end on MariaDB?
 
-##https://shopferz-by-snehil.netlify.app/ 
+https://shopferz-by-snehil.netlify.app/ 
