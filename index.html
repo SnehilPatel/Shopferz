@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice Yum!</title>
+    <!-- Custom CSS -->    
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery CDN -->
+    <script defer src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/d027480c9c.js" crossorigin="anonymous" defer></script> 
+    <!-- Custom JS -->   
+    <script src="./shop.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="main-header">
+        
+        <!-- Navbar --><!-- fixed-top ?-->
+        <nav class="navbar navbar-expand-lg px-4">
+            <!-- Brand Logo -->
+            <a href="#main-header" class="navbar-brand"> 
+                <img src="./imgs/icons/rice-icon.svg" class="img-fluid" alt="main logo"/>
+            </a>
+            <!-- Info Items in Nav -->
+            <div class="nav-main-info d-lg-flex mx-lg-5">
+                <!-- Phone Number -->
+                <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                    <span class="d-none d-md-block info-icon mx-lg-3">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    <p class="d-none d-md-block mb-0">+ 012345 67890</p>
+                </div>
+                <!-- Cart -->
+                <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                    <span class="cart-info-icon mx-2">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                    <p class="d-none d-md-block text-capitalize mb-0">
+                        <span id="item-count">0</span> 
+                        items - £
+                        <span class="item-total">0.00</span>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Hamburger Toggle Button-->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navigation">
+                <span class="navbar-toggler-icon d-flex align-items-center justify-content-center">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button> 
+                       
+            <!-- Main Navigation Links-->
+            <div class="collapse navbar-collapse" id="main-navigation">
+                <ul class="navbar-nav text-capitalize mx-auto">
+                    <li class="nav-item active">
+                        <a href="#main-header" class="nav-link">home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#about" class="nav-link">about us</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#products" class="nav-link">products</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#contact" class="nav-link">contact</a>
+                    </li>
+                </ul>
+            </div>
+           
+            
+            
+        </nav>
+        
+        <!-- Banner Section-->
+        <div class="container-fluid">
+            <div class="row banner justify-content-center align-items-center">
+                <div class="col-10 mx-auto banner-info text-center">
+                    <h1 class="text-capitalize">welcome to <strong class="banner-title">rice yum!</strong></h1>
+                    <a href="#products" class="btn banner-link text-uppercase  my-2">explore</a>
+                </div>
+
+            <!-- Open Cart -->
+            <div class="open-cart position-fixed" id="open-cart">
+        
+              <!-- single cart item 
+            <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                <img src="./imgs/display-img/rice-meal-2.jpg" alt="" class="img-fluid rounded-circle cart-img" id="item-img">
+            
+                <div class="item-text">
+                    <p id="cart-item-title">cart-item</p>
+                    <span>£</span>
+                <span id="cart-item-price" class="cart-item-price">10.99</span>
+                </div>
+                
+                <a href="#" class="cart-item-remove" id="cart-item-remove">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </div>
+            -->
+
+            <!-- Total -->
+            <div class="cart-total d-flex justify-content-around text-capitalize mt-5" >
+                <h5>total</h5>
+                <h5>£<strong id="cart-total" class="font-weight-bold">0.00</strong></h5>
+            </div>
+
+            <!-- Open Cart Buttons -->
+           <div class="d-flex justify-content-between mt-3 text-uppercase">
+               <a href="#" class="btn btn-black cart-item-btn">checkout</a>
+                <a href="" class="btn btn-red cart-item-btn">clear cart</a>
+            </div>
+        </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6 my-5">
+                    <h2 class="text-capitalize">about <strong class="banner-title">us</strong></h2>
+                    <p class="my-4 w-75 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ex maiores aut, officiis sit officia impedit provident omnis rerum explicabo aperiam itaque reiciendis doloremque unde suscipit nemo. Fugiat, facilis hic?</p>
+                    <a href="#products" class="btn btn-black text-uppercase">explore</a>
+                </div>
+                <div class="col-10 mx-auto col-md-6 my-5">
+                    <div class="about-img-container">
+                        <img src="./imgs/display-img/rice-1.jpg" alt="cooked rice" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Products Section-->
+    <section id="products">
+        <div class="container">
+           
+            <!-- Section Title -->
+            <div class="row">
+                <div class="col-10 mx-auto col-xs-6 text-center">
+                    <h2 class="text-capitalize">our <strong class="banner-title">products</strong></h2>
+                </div>
+            </div>
+            
+            <!-- Sort Buttons -->
+            <div class="row">
+                <div class="col-lg-8 mx-auto d-flex justify-content-around sortBtn flex-wrap">
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2"  data-filter="all">all</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2"  data-filter="all">main</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2"  data-filter="all">starters</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2"  data-filter="all">desserts</a>
+                </div>
+            </div>
+            
+            <!-- Search Input -->
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6">
+                    <form action="">
+                        <div class="input-group my-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text search-box">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                            <input type="text" id="search-item" class="form-control" placeholder="Search Meals...">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Items -->
+        <div class="container">
+            <div class="row product-items py-5" id="product-items">
+
+                <!-- single item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./imgs/display-img/rice-meal-1.jpg" alt="Rice Meal 1" class="card-img-top product-img">
+                            <span class="product-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="product-item-name">Rice Meal</h5>
+                                <h5 class="product-item-value">£<strong id="store-item-price" class="font-weight-bold">7.50</strong></h5>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <!-- single item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="./imgs/display-img/rice-meal-2.jpg" alt="Rice Meal 2" class="card-img-top product-img">
+                        <span class="product-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="product-item-name">Rice Meal</h5>
+                            <h5 class="product-item-value">£<strong id="store-item-price" class="font-weight-bold">10.50</strong></h5>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+                    
+                <!-- single item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="./imgs/display-img/rice-meal-3.jpg" alt="Rice Meal 3" class="card-img-top product-img">
+                        <span class="product-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="product-item-name">Rice Meal</h5>
+                            <h5 class="product-item-value">£<strong id="store-item-price" class="font-weight-bold">4.50</strong></h5>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services py-5">
+        <div class="container">
+            <div class="row">
+
+                <!-- single service -->
+                <div class="col-md-4 text-center my-3">
+                    <img class="service-icon" src="./imgs/icons/nature.svg" alt="Natural Plant Icon">
+                    <h5 class="text-uppercase my-3 service-title">fresh & natural</h5>
+                    <p class="w-75 mx-auto text-center service-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quo error placeat velit, ut natus nemo doloribus excepturi nobis aut corrupti cumque libero!
+                    </p>
+                </div>
+
+                <!-- single service -->
+                <div class="col-md-4 text-center my-3">
+                    <img class="service-icon" src="./imgs/icons/home-cooked.svg" alt="Home Cooked Food Icon">
+                    <h5 class="text-uppercase my-3 service-title">home cooked</h5>
+                    <p class="w-75 mx-auto text-center service-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quo error placeat velit, ut natus nemo doloribus excepturi nobis aut corrupti cumque libero! 
+                </div>
+
+                <!-- single service -->
+                <div class="col-md-4 text-center my-3">
+                    <img class="service-icon" src="./imgs/icons/full-meal-icon.svg" alt="Meal Icon">
+                    <h5 class="text-uppercase my-3 service-title">full meals</h5>
+                    <p class="w-75 mx-auto text-center service-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quo error placeat velit, ut natus nemo doloribus excepturi nobis aut corrupti cumque libero!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 footer-title py-5">
+                    <h1 class="text-capitalize banner-title text-center"><strong>rice yum!</strong></h1>
+                    <div class="footer-icons mt-3 d-flex justify-content-center align-items-center flex-wrap flex-column">
+                        <a href="#" class="footer-icon p-2">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer-icon p-2">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="footer-icon p-2">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer-icon p-2">
+                            <i class="fab fa-snapchat"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Contact form -->
+                <div class="col-md-6 footer-contact text-center text-capitalize p-5">
+                    <form>
+                        <fieldset class="text-capitalize">
+                          <legend >contact us</legend>
+                          <div class="form-group">
+                            <label for="input-email">Email address</label>
+                                <input type="email" class="form-control" id="input-email"  placeholder="Enter email">
+                                <p id="email-help" class="form-text">We'll never share your email with anyone else.</p>
+                          </div>                          
+                          <div class="form-group">
+                                <label for="input-text">your message</label>
+                                <textarea class="form-control" id="input-text" rows="5" placeholder="Enter your message"></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-black">
+                              <span class="btn-font">Submit</span>
+                            </button>
+                        </fieldset>
+                      </form>
+                </div>
+            </div>
+
+            <!-- Sitemap 
+            <div class="row text-capitalize">
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <h3>products</h3>
+                </div>
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <h3>about</h3>
+                </div>
+                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                    <h3>contact</h3>
+                </div>
+            </div>
+            -->
+        </div>
+    </footer>
+</body>
+</html>

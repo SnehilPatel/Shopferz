@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Raleway:wght@200&family=Taviraj&display=swap');
+/* 
+DOC Reset
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+Variables
+*/
+:root {
+    --h1Font: 'Fira Sans', sans-serif;
+    --h2Font: 'Raleway', sans-serif;
+    --pFont: 'Raleway', sans-serif;
+    --mainGrey: #302b27;
+    --mainWhite: #f5f3f5;
+    --mainLime: #c6f91f;
+    /*
+    Get RGB values for opacity
+    */
+    --mainYellow: #DDF45B;
+    --mainRed: #c17767;
+    --mainYellowOverlay:rgba(221, 244, 91, 0.2);
+    --mainRedOverlay: rgba(193, 119, 103, 0.4);
+    --mainTransition: all 0.35s linear;
+}
+
+/* 
+Custom DOM Element
+*/
+h1 {
+    font-family: var(--h1Font);
+    text-shadow: 0 0 3px var(--mainGrey), 0 0 5px var(--mainGrey);
+}
+h2,h3,h4,h5,legend,label,a {
+    font-family: var(--h2Font);
+}
+p {
+    font-family: var(--pFont);
+}
+li {
+    list-style-type: none;
+}
+.btn-red {
+    color: var(--mainGrey)!important;
+    border-color: var(--mainRed)!important;
+}
+.btn-red:hover {
+    color: var(--mainWhite) !important;
+    background-color: var(--mainRed)!important;
+}
+.btn-black {
+    color: var(--mainGrey)!important;
+    border-color: var(--mainGrey)!important;
+}
+.btn-black:hover {
+    color: var(--mainWhite) !important;
+    background-color: var(--mainGrey)!important;
+}
+.btn-font {
+    font-family: var(--h2Font);
+}
+.cart-img {
+    height: 4rem;
+    width: 4rem;
+}
+
+/* 
+Main Navigation 
+*/
+nav {
+    border-bottom: 0.15rem solid var(--mainLime);
+    background: rgba(255, 255, 255, 0.65);
+    
+}
+
+.navbar-brand img {
+    width: 3.75rem;
+    height: 3.75rem;
+}
+.nav-link {
+    color: var(--mainGrey);
+    transition: var(--mainTransition);
+    font-size: 1.15rem;
+}
+.nav-link:hover {
+    color: var(--mainRed);
+}
+/* Main Navigation - Phone Info */
+.nav-info {
+    font-size: 1.15rem;
+}
+/* Main Navigation - Cart Info */
+#cart-info {
+    cursor: pointer;
+    border: 0.15rem solid var(--mainGrey);
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.25rem;
+    font-size: 1.15rem;
+    transition: var(--mainTransition);
+    color: var(--mainGrey);
+}
+#cart-info:hover {
+    background-color: var(--mainRed);
+    border-color: var(--mainRed);
+    color: #fff;
+}
+
+/* 
+Hamburger Toggle
+*/
+.navbar-toggler {
+    outline: none !important;
+}
+.navbar-toggler-icon {
+    font-size: 2.25rem;
+}
+
+/* 
+Banner Section
+*/
+.banner {
+    min-height: calc(100vh - 87px);
+    background:
+    linear-gradient(var(--mainRedOverlay), var(--mainRedOverlay)),
+    url('./imgs/display-img/rice-hero.jpg')
+    center/cover
+    no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+.banner-info {
+    color: var(--mainWhite);
+}
+.banner-title{
+    color: var(--mainLime);
+    font-size: 4.25rem;
+}
+.banner-info>.banner-link {
+    color: var(--mainGrey);
+    border: 0.15rem solid var(--mainGrey);
+    font-size: 1.2rem;
+    background: var(--mainWhite) ;
+    transition: var(--mainTransition);
+}
+.banner-info>.banner-link:hover {
+    color: var(--mainWhite);
+    background: var(--mainGrey);
+}
+
+/* 
+About Section
+*/
+.about-img-container {
+    position: relative;
+}
+.about-img-container::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: -1.25rem;
+    outline: 0.5rem solid var(--mainYellow);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;    
+}
+.about-img-container:hover::before {
+    top: 0;
+    left: 0;
+}
+
+/*
+Products Section 
+*/
+#products {
+    background: var(--mainWhite);
+}
+.search-box {
+    background: var(--mainRed)!important;
+    color: var(--mainWhite)!important;
+}
+.single-item {
+    transition: all 0.3s linear;
+}
+.single-item:hover {
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+}
+.img-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.product-img {
+    transition: var(--mainTransition);
+}
+.img-container:hover .product-img{
+    /* Zoom in on hover by 1.2x */
+    transform: scale(1.2);
+}
+.product-item-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: var(--mainWhite);
+    background-color: var(--mainLime);
+    padding: 0.55rem;
+    font-size: 1.75rem;
+    border-top-left-radius: 1rem;
+    transition: var(--mainTransition);
+    transform: translate(100%, 100%);
+}
+.img-container:hover .product-item-icon{
+    transform: translate(0,0);
+}
+.product-item-icon:hover {
+    color: var(--mainGrey);
+}
+
+/*
+Service Section
+*/
+.services {
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0, 0.65)),
+    url('./imgs/display-img/services-hero.jpg')
+    center/cover
+    no-repeat
+    fixed;
+    color: var(--mainWhite);
+}
+.service-icon {
+    height: 6rem;
+    width: 6rem;
+}
+.service-title {
+    letter-spacing: 0.25rem;
+}
+.service-text {
+    word-spacing: 0.2rem;
+}
+
+/* 
+Footer Section
+*/
+.footer-title {
+    color: var(--mainGrey);
+    background: var(--mainYellow);
+}
+.footer-title>.banner-title{
+    color: var(--mainWhite);
+}
+.footer-contact {
+    background: var(--mainYellow);
+}
+.footer-icon>i {
+    font-size: 2.2rem;
+    color: var(--mainGrey);
+}
+
+/*
+Open Cart
+*/
+.open-cart {
+    position: absolute;
+    right: 0;
+    top: 87px;
+    padding: 2rem;
+    background-color: var(--mainWhite);
+    z-index: 1;
+    box-shadow: 5px 5px 15px;
+    transition: var(--mainTransition);
+    border-bottom: 0.15rem solid var(--mainLime);
+    border-radius: 0.15rem;
+    display: none;
+}
+.cart-item-btn {
+    margin: 0.5rem 0.75rem;
+}
+.cart-item-remove {
+    color: var(--mainGrey);
+    transition: var(--mainTransition);
+    font-size: 1.25rem;
+}
+.cart-item-remove:hover {
+    color: var(--mainRed);
+}
+.item-text {
+    font-family: var(--pFont);
+}
+
+/* Show class with JS - via toggle on DOM method */
+.display-cart {
+   display: block;
+}  
